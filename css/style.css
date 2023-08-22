@@ -1,0 +1,686 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dad9d4;
+}
+
+header {
+  background-color: none;
+  position: fixed;
+  top: 0;
+  padding: 1em 5% 1em 1em;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s all;
+  height: 10vh;
+}
+header img {
+  max-width: 10vh;
+  border-radius: 50%;
+}
+header .navBar ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 0.5em;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+header .navBar ul li a {
+  text-decoration: none;
+  color: #212121;
+  font-size: 1.3em;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  padding: 0.5em 0.6em;
+  border-radius: 0.5em;
+}
+header .navBar ul li :hover {
+  color: #b6cd01;
+  background: #cb02a1;
+}
+header .navBar ul #descargarCV {
+  border: none;
+  font-size: 1.2em;
+  background-color: #b6cd01;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin-left: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  transition: all 0.4s ease-in-out;
+}
+header .navBar ul #descargarCV:hover {
+  color: #fff;
+  background-color: #cb02a1;
+  scale: 110%;
+}
+header #abrirMenú {
+  display: none;
+}
+header #cerrarMenú {
+  display: none;
+}
+
+.scroll {
+  background-color: #212121;
+  transition: all 0.2s ease-in-out;
+}
+.scroll .navBar ul li a {
+  color: #dad9d4;
+  transition: all 0.2s ease-in-out;
+}
+.scroll .navBar ul li a:hover {
+  color: #b6cd01;
+}
+.scroll #abrirMenú {
+  color: #dad9d4;
+}
+
+.presentation {
+  height: 100vh;
+}
+.presentation .presentationBox {
+  width: 90%;
+  margin: 10vh auto 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 10em 5em 10em 5em;
+}
+.presentation .presentationBox .preBoxInfo {
+  border-right: #212121 2px solid;
+  padding: 0 2em 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.presentation .presentationBox .preBoxInfo .preBoxPre h1 {
+  font-size: 1.8em;
+}
+.presentation .presentationBox .preBoxInfo .preBoxPre h1 a {
+  color: #cb02a1;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+.presentation .presentationBox .preBoxInfo .preBoxPre h1 a:hover {
+  color: #b6cd01;
+}
+.presentation .presentationBox .preBoxInfo .verCV {
+  margin: 2em 0;
+  border: none;
+  font-size: 1.3em;
+  background-color: #b6cd01;
+  padding: 0.6em 1.5em;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+}
+.presentation .presentationBox .preBoxInfo .verCV:hover {
+  color: #fff;
+  background-color: #cb02a1;
+  scale: 105%;
+}
+.presentation .presentationBox .preBoxInfo .preBoxRedes svg {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+.presentation .presentationBox .preBoxInfo .preBoxRedes :hover {
+  color: #cb02a1;
+}
+.presentation .presentationBox .preBoxImg img {
+  max-width: 300px;
+  color: red;
+}
+
+#aboutMe {
+  background: linear-gradient(to bottom, rgba(218, 217, 212, 0.8), rgba(218, 217, 212, 0.8)), url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+#aboutMe .about {
+  width: 90%;
+}
+#aboutMe .about .aboutTitle {
+  text-align: center;
+  padding: 8em 0 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aboutMe .about .aboutTitle h2 {
+  font-size: 3em;
+  color: #212121;
+}
+#aboutMe .about .aboutTitle div {
+  height: 3px;
+  width: 20%;
+  background-color: #cb02a1;
+  margin: 1em 0;
+}
+#aboutMe .about .aboutInfo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe {
+  grid-row: 1/3;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  padding: 2em;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #cb02a1;
+  margin: 1em 0;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoName h3 {
+  font-size: 2em;
+  color: #b6cd01;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoName h3 b {
+  font-size: 1.5em;
+  color: #cb02a1;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoName p {
+  color: #212121;
+  font-size: 1.4em;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoName span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #cb02a1;
+  margin: 1em 0;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoEducation {
+  display: flex;
+  flex-direction: column;
+  margin: 3em 0;
+  width: 100%;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoEducation button {
+  width: 60px;
+  height: 30px;
+  border: none;
+  border: 2px solid #b6cd01;
+  font-size: 1.5em;
+  color: #212121;
+  margin: 0 -0.1em;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoEducation button:nth-child(1) {
+  border-right: 1px solid #b6cd01;
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoEducation button:nth-child(2) {
+  border-left: 1px solid #b6cd01;
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoEducation h4 {
+  padding: 0.5em 0;
+  color: #212121;
+  font-size: 1.2em;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoEducation p {
+  color: #212121;
+  font-size: 1.2em;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoLanguajes {
+  width: 100%;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoLanguajes h4 {
+  color: #212121;
+  font-weight: 100;
+  font-size: 1.5em;
+  background-color: white;
+  border-radius: 5em;
+  border: 2px solid #b6cd01;
+  width: 110px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#aboutMe .about .aboutInfo .aboutInfoMe .aboutInfoLanguajes p {
+  margin: 0.3em 0;
+  font-size: 1.4em;
+  color: #212121;
+}
+#aboutMe .about .aboutInfo .aboutInfoServices .aboutInfoSer {
+  padding: 2em;
+}
+#aboutMe .about .aboutInfo .aboutInfoServices .aboutInfoSer h3 {
+  color: #b6cd01;
+  font-size: 2em;
+}
+#aboutMe .about .aboutInfo .aboutInfoServices .aboutInfoSer h3 b {
+  color: #cb02a1;
+  font-size: 1.5em;
+}
+#aboutMe .about .aboutInfo .aboutInfoServices .aboutInfoSer span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #cb02a1;
+  margin: 1em 0;
+}
+#aboutMe .about .aboutInfo .aboutInfoServices .aboutInfoSer ul {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+#aboutMe .about .aboutInfo .aboutInfoServices .aboutInfoSer ul li {
+  list-style: none;
+}
+#aboutMe .about .aboutInfo .aboutInfoServices .aboutInfoSer ul li p {
+  padding: 0.3em 0;
+  color: #212121;
+  font-size: 1.4em;
+}
+#aboutMe .about .aboutInfo .aboutInfoSkills {
+  padding: 2em;
+}
+#aboutMe .about .aboutInfo .aboutInfoSkills h3 {
+  color: #b6cd01;
+  font-size: 2em;
+}
+#aboutMe .about .aboutInfo .aboutInfoSkills h3 b {
+  color: #cb02a1;
+  font-size: 1.5em;
+}
+#aboutMe .about .aboutInfo .aboutInfoSkills span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #cb02a1;
+  margin: 1em 0;
+}
+#aboutMe .about .aboutInfo .aboutInfoSkills .aboutInfoSki {
+  display: flex;
+  flex-flow: row wrap;
+}
+#aboutMe .about .aboutInfo .aboutInfoSkills .aboutInfoSki div {
+  margin: 0.1em;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4392156863) 50%, rgba(0, 0, 0, 0.5647058824) 30%);
+  padding: 1em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#aboutMe .about .aboutInfo .aboutInfoSkills .aboutInfoSki div img {
+  max-width: 45px;
+}
+
+#proyects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212121;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(0,683,328)'%3E%3Cstop offset='0' stop-color='%23212121'/%3E%3Cstop offset='1' stop-color='%23212121'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='300' height='250' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.01'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+#proyects .proyects {
+  width: 90%;
+}
+#proyects .proyects .proyectsTitle {
+  text-align: center;
+  padding: 8em 0 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#proyects .proyects .proyectsTitle h2 {
+  font-size: 3em;
+  color: #b6cd01;
+}
+#proyects .proyects .proyectsTitle h2 b {
+  font-size: 2em;
+  color: #cb02a1;
+}
+#proyects .proyects .proyectsTitle div {
+  height: 3px;
+  width: 30%;
+  background-color: #cb02a1;
+  margin: 2em 0;
+}
+#proyects .proyects .proyectsTitle p {
+  color: #dad9d4;
+  width: 70%;
+  font-size: 1.2em;
+}
+#proyects .proyects .proyectsBox {
+  width: 100%;
+  margin: 0 0 5em 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2em;
+}
+#proyects .proyects .proyectsBox .proyectsBoxImg {
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+}
+#proyects .proyects .proyectsBox .proyectsBoxImg img {
+  width: 90%;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo {
+  border-left: 3px solid #cb02a1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em 0 1em 2em;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo h3 {
+  font-size: 2em;
+  color: #b6cd01;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo p {
+  padding-top: 1.5em;
+  font-size: 1.2em;
+  width: 80%;
+  color: #dad9d4;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo ul {
+  display: flex;
+  padding: 3em 0 4em 0;
+  flex-flow: row wrap;
+  align-items: center;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo ul li {
+  list-style: none;
+  background-color: #cb02a1;
+  border-radius: 0.5em;
+  margin: 0.5em 0.5em 0 0;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo ul li p {
+  padding: 0.1em 0.5em;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo ul li img {
+  max-width: 40px;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo a {
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #b6cd01;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  transition: all 0.4s ease-in-out;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+}
+#proyects .proyects .proyectsBox .proyectsBoxInfo a:hover {
+  color: #cb02a1;
+  background-color: #dad9d4;
+}
+
+#contact {
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse' patternTransform='scale(0.04)'%3E%3Cpath data-color='outline' fill='none' stroke='%23DAD9D4' stroke-width='0.94' d='M33.5 100V66.5H0v-33h33.5V0h33v33.5H100v33H66.5V100z'%3E%3C/path%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #212121;
+}
+#contact .contactRedes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  padding-top: 6em;
+}
+#contact .contactRedes a {
+  padding: 1em 1em;
+  background: rgba(255, 255, 255, 0.1882352941);
+  border-radius: 1em;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contactRedes a i {
+  font-size: 3em;
+  color: #dad9d4;
+}
+#contact .contactRedes a .bi-behance {
+  font-size: 3.5em;
+}
+#contact .contactRedes a:nth-child(1):hover {
+  box-shadow: 0 0 30px #0e76a8;
+}
+#contact .contactRedes a:nth-child(1):hover i {
+  color: white;
+}
+#contact .contactRedes a:nth-child(2):hover {
+  box-shadow: 0 0 30px #C13584;
+}
+#contact .contactRedes a:nth-child(2):hover i {
+  color: white;
+}
+#contact .contactRedes a:nth-child(3):hover {
+  box-shadow: 0 0 30px #053eff;
+}
+#contact .contactRedes a:nth-child(3):hover i {
+  color: white;
+}
+#contact .contactRedes a:nth-child(4):hover {
+  box-shadow: 0 0 30px #c71610;
+}
+#contact .contactRedes a:nth-child(4):hover i {
+  color: white;
+}
+#contact .contactMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4em 0;
+}
+#contact .contactMenu a {
+  color: #dad9d4;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  padding: 0.5em 0.6em;
+  border-radius: 0.5em;
+}
+#contact .contactMenu a:hover {
+  color: #b6cd01;
+  background: #cb02a1;
+}
+#contact span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #dad9d4;
+  background-color: #212121;
+  padding: 0.5em 0;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0em 1em 0em 0em;
+    height: 8vh;
+  }
+  header .navBar {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    gap: 2em;
+    padding: 3em;
+    background: #212121;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
+  }
+  header .navBar #cerrarMenú {
+    display: block;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  header .navBar ul {
+    flex-direction: column;
+    gap: 2em;
+  }
+  header .navBar ul li a {
+    color: #dad9d4;
+  }
+  header .navBar ul #descargarCV {
+    margin: 0;
+  }
+  header .visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+  }
+  header #abrirMenú {
+    display: block;
+    background: none;
+    border: none;
+    color: #212121;
+    cursor: pointer;
+  }
+  header #abrirMenú svg {
+    height: 50px;
+    width: 50px;
+  }
+  .presentation {
+    height: auto;
+  }
+  .presentation .presentationBox {
+    width: 90%;
+    flex-direction: column;
+    padding: 10em 0 5em 0;
+  }
+  .presentation .presentationBox .preBoxInfo {
+    align-items: flex-end;
+  }
+  .presentation .presentationBox .preBoxInfo .preBoxPre h1 {
+    text-align: end;
+    font-size: 1.8em;
+  }
+  .presentation .presentationBox .preBoxImg {
+    margin: 0 auto;
+    padding: 3em;
+  }
+  .presentation .presentationBox .preBoxImg img {
+    max-width: 100%;
+  }
+  .ability {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .ability .skills .softwaresIcons {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    gap: 0;
+  }
+  .ability .skills .softwaresIcons div {
+    padding: 1em;
+  }
+  .ability .skills .softwaresIcons div :nth-child(10) {
+    grid-column: 1/3;
+  }
+  #proyects .proyects {
+    width: 100%;
+  }
+  #proyects .proyects .proyectsTitle p {
+    width: 80%;
+  }
+  #proyects .proyects .proyectsBox {
+    display: block;
+    width: 90%;
+    margin: 2em auto;
+  }
+  #proyects .proyects .proyectsBox .proyectsBoxImg {
+    padding: 2em 0 0 0;
+  }
+  #proyects .proyects .proyectsBox .proyectsBoxImg img {
+    width: 100%;
+  }
+  #proyects .proyects .proyectsBox .proyectsBoxInfo {
+    border: none;
+    border-top: 3px solid #cb02a1;
+    text-align: center;
+    padding: 2em 0.5em;
+    align-items: center;
+  }
+  #proyects .proyects .proyectsBox .proyectsBoxInfo p {
+    width: 90%;
+  }
+  #proyects .proyects .proyectsBox .proyectsBoxInfo ul {
+    width: 100%;
+    justify-content: center;
+  }
+  #aboutMe .about .aboutInfo {
+    display: block;
+  }
+  #aboutMe .about .aboutInfo .aboutInfoSkills .aboutInfoSki div img {
+    max-width: 35px;
+  }
+  #contact .contactRedes {
+    gap: 1em;
+  }
+  #contact .contactRedes a {
+    width: 50px;
+    height: 50px;
+    padding: 2.5em;
+  }
+  #contact .contactRedes a i {
+    font-size: 2.8em;
+  }
+  #contact .contactRedes a .bi-behance {
+    font-size: 3.2em;
+  }
+  #contact .contactMenu {
+    gap: 0.5em;
+    flex-direction: column;
+    padding: 3em 0;
+  }
+}/*# sourceMappingURL=style.css.map */

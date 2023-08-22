@@ -1,0 +1,187 @@
+@media screen and (max-width: 768px) {
+
+
+    header {
+        padding: 0em 1em 0em 0em;
+        height: 8vh;
+        .navBar {
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            gap: 2em;
+            padding: 3em;
+            background: $base;
+            box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(100px);
+            #cerrarMenú {
+                display: block;
+                font-size: 1.5em;
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+            }
+
+            ul {
+                flex-direction: column;
+                gap: 2em;
+                li{
+                    a{
+                        color: $second;
+                    }
+                }
+                #descargarCV{
+                    margin: 0;
+                }
+            }
+        }
+
+        .visible {
+            opacity: 1;
+            visibility: visible;
+            transition: all .5s ease-in-out;
+        }
+
+        #abrirMenú {
+            display: block;
+            background: none;
+            border: none;
+            color: $base;
+            cursor: pointer;
+            svg{
+                height: 50px;
+                width: 50px;
+            }
+            
+        }
+
+    }
+
+    .presentation{
+        height: auto;
+        .presentationBox{
+            width: 90%;
+            flex-direction: column;
+            padding: 10em 0 5em 0;
+            .preBoxInfo{
+                align-items: flex-end;
+                .preBoxPre{
+                    h1{
+                        text-align: end;
+                        font-size: 1.8em;
+                    }
+                }
+            }
+            .preBoxImg{
+                margin: 0 auto;
+                padding: 3em;
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+
+    .ability{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        .skills{
+            .softwaresIcons{
+                grid-template-columns: 1fr 1fr;
+                height: auto;
+                gap: 0;
+                div{
+                    padding: 1em;
+                    :nth-child(10){
+                        grid-column: 1/3;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    #proyects{
+        .proyects{
+            width: 100%;
+            .proyectsTitle{
+                p{
+                    width: 80%;
+                }
+            }
+            .proyectsBox{
+                display: block;
+                width: 90%;
+                margin: 2em auto;
+                .proyectsBoxImg{
+                    padding: 2em 0 0 0;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .proyectsBoxInfo{
+                    border: none;
+                    border-top: 3px solid $details1;
+                    text-align: center;
+                    padding: 2em .5em;
+                    align-items: center;
+                    p{
+                        width: 90%;
+                    }
+                    ul{
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+    #aboutMe{
+        .about{
+            .aboutInfo{
+                display: block;
+                .aboutInfoSkills{
+                    .aboutInfoSki{
+                        div{
+                            img{
+                                max-width: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #contact{
+        .contactRedes{
+            gap: 1em;
+            a{
+                width: 50px;
+                height: 50px;
+                padding: 2.5em;
+                i{
+                    font-size: 2.8em;
+                }
+                .bi-behance{
+                    font-size: 3.2em;
+                }
+            }
+        }
+        .contactMenu{
+            gap: .5em;
+            flex-direction: column;
+            padding: 3em 0;
+        }
+        
+    }
+
+
+}

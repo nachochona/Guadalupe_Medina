@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+@import "branchs/reset.scss";
+@import "branchs/colors.scss";
+
+body {
+    background-color: $second;
+}
+
+header {
+    background-color: none;
+    position: fixed;
+    top: 0;
+    padding: 1em 5% 1em 1em;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s all;
+    height: 10vh;
+
+    img {
+        max-width: 10vh;
+        border-radius: 50%;
+    }
+
+    .navBar {
+        ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: .5em;
+            text-transform: uppercase;
+            background-color: transparent;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $base;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    transition: all .2s ease-in-out;
+                    padding: .5em .6em;
+                    border-radius: .5em;
+                }
+
+                :hover {
+                    color: $details2;
+                    background: $details1;
+
+                }
+            }
+
+            #descargarCV {
+                border: none;
+                font-size: 1.2em;
+                background-color: $details2;
+                padding: .5em 1em;
+                border-radius: .5em;
+                margin-left: 1em;
+                text-transform: uppercase;
+                cursor: pointer;
+                color: black;
+                transition: all .4s ease-in-out;
+
+            }
+
+            #descargarCV:hover {
+                color: #fff;
+                background-color: $details1;
+                scale: 110%;
+            }
+
+
+
+        }
+
+    }
+
+    #abrirMenú {
+        display: none;
+
+    }
+
+    #cerrarMenú {
+        display: none
+    }
+}
+
+.scroll {
+    background-color: $base;
+    transition: all .2s ease-in-out;
+
+    .navBar {
+        ul {
+            li {
+                a {
+                    color: $second;
+                    transition: all .2s ease-in-out;
+                }
+
+                a:hover {
+                    color: $details2;
+                }
+
+            }
+
+        }
+    }
+
+    #abrirMenú {
+        color: $second;
+    }
+
+}
+
+.presentation {
+    height: 100vh;
+    .presentationBox {
+        width: 90%;
+        margin: 10vh auto 0 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 10em 5em 10em 5em;
+
+        .preBoxInfo {
+            border-right: $base 2px solid;
+            padding: 0 2em 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+            .preBoxPre {
+                h1 {
+                    font-size: 1.8em;
+
+                    a {
+                        color: $details1;
+                        transition: all .4s ease-in-out;
+                        cursor: pointer;
+                        padding: 0;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: $details2;
+                    }
+                }
+            }
+
+            .verCV {
+                margin: 2em 0;
+                border: none;
+                font-size: 1.3em;
+                background-color: $details2;
+                padding: .6em 1.5em;
+                border-radius: .5em;
+                text-transform: uppercase;
+                cursor: pointer;
+                color: black;
+                transition: all .4s ease-in-out;
+                text-decoration: none;
+            }
+
+            .verCV:hover {
+                color: #fff;
+                background-color: $details1;
+                scale: 105%;
+            }
+
+            .preBoxRedes {
+                svg {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 .5em;
+                    cursor: pointer;
+                }
+
+                :hover {
+                    color: $details1;
+                }
+            }
+        }
+
+        .preBoxImg {
+
+            // box-shadow: 20px 20px 20px 0 #00000020;
+            img {
+                max-width: 300px;
+                color: red;
+
+            }
+        }
+    }
+}
+
+
+#aboutMe {
+    background: linear-gradient(to bottom,rgba(218,217,212,.8),rgba(218, 217, 212, 0.8)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    .about {
+        width: 90%;
+
+        .aboutTitle {
+            text-align: center;
+            padding: 8em 0 3em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-size: 3em;
+                color: $base;
+            }
+
+            div {
+                height: 3px;
+                width: 20%;
+                background-color: $details1;
+                margin: 1em 0;
+            }
+        }
+
+        .aboutInfo {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            .aboutInfoMe {
+                grid-row: 1/3;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: start;
+                padding: 2em;
+                span {
+                    display: block;
+                    height: 3px;
+                    width: 100%;
+                    background-color: $details1;
+                    margin: 1em 0;
+                }
+                .aboutInfoName {
+                    h3 {
+                        font-size: 2em;
+                        color: $details2;
+
+                        b {
+                            font-size: 1.5em;
+                            color: $details1;
+                        }
+                    }
+
+                    p {
+                        color: $base;
+                        font-size: 1.4em;
+                    }
+
+                    span {
+                        display: block;
+                        height: 3px;
+                        width: 100%;
+                        background-color: $details1;
+                        margin: 1em 0;
+                    }
+                }
+
+                .aboutInfoEducation {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 3em 0;
+                    width: 100%;
+                    button {
+                        width: 60px;
+                        height: 30px;
+                        border: none;
+                        border: 2px solid $details2;
+                        font-size: 1.5em;
+                        color: $base;
+                        margin: 0 -.1em;
+                    }
+
+                    button:nth-child(1) {
+                        border-right: 1px solid $details2;
+                        border-top-left-radius: 5em;
+                        border-bottom-left-radius: 5em;
+                    }
+
+                    button:nth-child(2) {
+                        border-left: 1px solid $details2;
+                        border-top-right-radius: 5em;
+                        border-bottom-right-radius: 5em;
+                    }
+
+                    h4 {
+                        padding: .5em 0;
+                        color: $base;
+                        font-size: 1.2em;
+                    }
+
+                    p {
+                        color: $base;
+                        font-size: 1.2em;
+                    }
+                }
+                .aboutInfoLanguajes{
+                    width: 100%;
+                    h4{
+                        color: $base;
+                        font-weight: 100;
+                        font-size: 1.5em;
+                        background-color: white;
+                        border-radius: 5em;
+                        border: 2px solid $details2;
+                        width: 110px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    p{
+                        margin: .3em 0;
+                        font-size: 1.4em;
+                        color: $base;
+                    }
+                }
+            }
+
+            .aboutInfoServices {
+                .aboutInfoSer{
+                    padding: 2em;
+                    h3{
+                        color: $details2;
+                        font-size: 2em;
+                        b{
+                            color: $details1;
+                            font-size: 1.5em;
+                        }
+                    }
+                    span{
+                        display: block;
+                        height: 3px;
+                        width: 100%;
+                        background-color: $details1;
+                        margin: 1em 0;
+                    }
+                    ul{
+                        display: flex;
+                        justify-content: center;
+                        align-items: start;
+                        flex-direction: column;
+                        li{
+                            list-style: none;
+                            p{
+                                padding: .3em 0;
+                                color: $base;
+                                font-size: 1.4em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .aboutInfoSkills {
+                padding: 2em;
+                    h3{
+                        color: $details2;
+                        font-size: 2em;
+                        b{
+                            color: $details1;
+                            font-size: 1.5em;
+                        }
+                    }
+                    span{
+                        display: block;
+                        height: 3px;
+                        width: 100%;
+                        background-color: $details1;
+                        margin: 1em 0;
+                    }
+                    .aboutInfoSki{
+                        display: flex;
+                        flex-flow: row wrap;
+                        div{
+                            margin: .1em;
+                            background: linear-gradient(135deg, #00000070 50%, #00000090 30%);
+                            padding: 1em;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                max-width: 45px;
+                            }
+                            
+                        }
+                    }
+            }
+        }
+    }
+
+    
+}
+
+
+
+
+#proyects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(0,683,328)'%3E%3Cstop offset='0' stop-color='%23212121'/%3E%3Cstop offset='1' stop-color='%23212121'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='300' height='250' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.01'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    .proyects {
+        width: 90%;
+
+        .proyectsTitle {
+            text-align: center;
+            padding: 8em 0 5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                font-size: 3em;
+                color: $details2;
+
+                b {
+                    font-size: 2em;
+                    color: $details1;
+                }
+            }
+
+            div {
+                height: 3px;
+                width: 30%;
+                background-color: $details1;
+                margin: 2em 0;
+            }
+
+            p {
+                color: $second;
+                width: 70%;
+                font-size: 1.2em;
+            }
+        }
+
+        .proyectsBox {
+            width: 100%;
+            margin: 0 0 5em 0;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2em;
+
+            .proyectsBoxImg {
+                display: flex;
+                justify-content: center;
+                padding: 2em 0;
+
+                img {
+                    width: 90%;
+                }
+            }
+
+            .proyectsBoxInfo {
+                border-left: 3px solid $details1;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 1em 0 1em 2em;
+
+                h3 {
+                    font-size: 2em;
+                    color: $details2;
+                }
+
+                p {
+                    padding-top: 1.5em;
+                    font-size: 1.2em;
+                    width: 80%;
+                    color: $second;
+                }
+
+                ul {
+                    display: flex;
+                    padding: 3em 0 4em 0;
+                    flex-flow: row wrap;
+                    align-items: center;
+
+                    li {
+                        list-style: none;
+                        background-color: $details1;
+                        border-radius: .5em;
+                        margin: .5em .5em 0 0;
+
+                        p {
+                            padding: .1em .5em;
+                        }
+
+                        img {
+                            max-width: 40px;
+                        }
+                    }
+                }
+
+                a {
+                    border: none;
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    background-color: $details2;
+                    padding: 1em 2em;
+                    border-radius: .5em;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    color: black;
+                    transition: all .4s ease-in-out;
+                    width: max-content;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: $details1;
+                    background-color: $second;
+                }
+            }
+        }
+    }
+}
+
+
+
+#contact{
+    width: 100%;    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse' patternTransform='scale(0.04)'%3E%3Cpath data-color='outline' fill='none' stroke='%23DAD9D4' stroke-width='0.94' d='M33.5 100V66.5H0v-33h33.5V0h33v33.5H100v33H66.5V100z'%3E%3C/path%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $base;   
+    .contactRedes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4em;
+        padding-top: 6em;
+        a{
+            padding: 1em 1em;
+            background: #ffffff30;
+            border-radius: 1em;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                font-size: 3em;
+                color: $second;
+            }
+            .bi-behance{
+                font-size: 3.5em;
+            }
+        }
+        a:nth-child(1):hover{
+            box-shadow: 0 0 30px $linkedin;
+            i{
+                color: white;
+            }
+        }
+        a:nth-child(2):hover{
+            box-shadow: 0 0 30px $instagram;
+            i{
+                color: white;
+            }
+        }
+        a:nth-child(3):hover{
+            box-shadow: 0 0 30px $behance;
+            i{
+                color: white;
+            }
+        }
+        a:nth-child(4):hover{
+            box-shadow: 0 0 30px $email;
+            i{
+                color: white;
+            }
+        }
+    }
+    .contactMenu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        padding: 4em 0;
+        a{
+            color: $second;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all .2s ease-in-out;
+            padding: .5em .6em;
+            border-radius: .5em;
+        }
+        a:hover {
+            color: $details2;
+            background: $details1;
+        }
+    }
+    span{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        color: $second;
+        background-color: $base;
+        padding: .5em 0;
+    }
+
+}
+
+
+
+
+
+@import "branchs/media.scss";
